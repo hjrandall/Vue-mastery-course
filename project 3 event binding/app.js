@@ -12,8 +12,11 @@ const app = Vue.createApp({
     remove(){
       this.counter -= 1;
     },
-    setName(event){
-      this.name = event.target.value
+    setName(event,num){
+      this.name = event.target.value 
+    },
+    submitForm(){
+      alert("hi mom")
     }
   }
 });
