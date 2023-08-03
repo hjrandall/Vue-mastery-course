@@ -2,7 +2,8 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      fullname:''
     };
   },
   methods: {
@@ -21,8 +22,18 @@ const app = Vue.createApp({
     }
   },
   computed: {
-    fullName(){
+    fullNasdf(){
       return "john"
+    }
+  },
+  watch: {
+    name(value){
+      this.fullname = value + " " + "randall"
+    },
+    counter(value){
+      if(value >50){
+        this.counter=0;
+      }
     }
   }
 });
